@@ -1,0 +1,18 @@
+{
+  "name": "polymath",
+  "productName": "PolyMath",
+  "version": "1.0.0",
+  "description": "PolyMath: turn any book into a mastery course, plus SAT practice",
+  "main": "main.js",
+  "author": "PolyMath",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . \"PolyMath\" --platform=win32 --arch=x64 --out=dist --overwrite --icon=build/icon.ico --ignore=^/dist --ignore=^/build-src --app-copyright=\"PolyMath\" --win32metadata.ProductName=\"PolyMath\" --win32metadata.FileDescription=\"PolyMath\""
+  },
+  "devDependencies": {
+    "electron": "44.9.0",
+    "@electron/packager": "20.3.0"
+  }
+}
