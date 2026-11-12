@@ -1,0 +1,27 @@
+/* PolyMath design tokens. Every colour, radius and space in the app comes from here. */
+:root{
+  --bg:#ffffff;--surface:#ffffff;--sunken:#f5f5f4;--line:#e5e5e5;--ink:#1a1a1a;--muted:#6b6b6b;--track:#e8e8e8;
+  --accent:#ffc800;--accent-ink:#1a1a1a;--ok:#12885a;--bad:#d6404a;--flame:#ff8a00;
+  --tone:#3d63f5;--tone-ink:#ffffff;
+  --r-card:28px;--r-ctl:999px;--r-sm:14px;
+  --font:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#101113;--surface:#17181b;--sunken:#1e2024;--line:#2c2e33;--ink:#f3f3f1;--muted:#a1a1a6;--track:#2a2c31;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#101113;--surface:#17181b;--sunken:#1e2024;--line:#2c2e33;--ink:#f3f3f1;--muted:#a1a1a6;--track:#2a2c31;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font:500 16px/1.5 var(--font);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+h1{font-weight:800;font-size:clamp(24px,3vw,30px);letter-spacing:-.02em;line-height:1.15}
+h2{font-weight:800;font-size:20px;letter-spacing:-.01em}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.muted{color:var(--muted)}
+.label{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:color-mix(in srgb,var(--tone) 72%,var(--ink))}
+.stack{display:flex;flex-direction:column;gap:16px}
+.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.num{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
